@@ -34,10 +34,3 @@ const PORT = process.env.PORT || 5003;
 app.listen(PORT, () => {
   console.log(`Load Balancer running on port ${PORT}`);
 });
-
-app.get("/health", (req, res) => {
-  res.json({
-    status: "OK",
-    instance: INSTANCE,
-  });
-});
